@@ -29,6 +29,7 @@ h3 {
 
 #service-btn-container {
   margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -41,4 +42,73 @@ h3 {
   border: 1px solid #d5d4d8;
   box-sizing: border-box;
   border-radius: 7px;
+}
+
+.description-container {
+  color: lightgray;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.description-container #services-container {
+  margin-top: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.remove-btn {
+  background: none;
+  margin-left: 20px;
+  color: gray;
+  font-style: italic;
+  border: none;
+}
+
+.description-container hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-width: 0.25px;
+}
+
+.r-lbl {
+  float: right;
+}
+
+.r-symbol-lbl {
+  float: right;
+  color: gray;
+}
+
+#pmt-lbl {
+  font-size: 14px;
+}
+
+#total-lbl {
+  font-size: 30px;
+  color: white;
+}
+#r-total-symbol-lbl {
+  float: right;
+  font-size: 30px;
+  color: white;
+}
+
+#send-btn-container {
+  text-align: center;
+  margin: 80px 30px;
+}
+
+#send-btn {
+  background: #3a69d2;
+  color: white;
+  font-size: 14px;
+  height: 35px;
+  width: 100%;
+  border: none;
+
+  border-radius: 5px;
 }

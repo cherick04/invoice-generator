@@ -7,12 +7,23 @@
             <h1>Invoice creator</h1>
             <h3>Thanks for choosing CherickCorp, Inc.!</h3>
         </div>
-        <div id="service-btn-container">
-            <!-- <button class="service-btn">wash car</button>
-            <button class="service-btn">wash car</button>
-            <button class="service-btn">wash car</button> -->
+        <div id="service-btn-container"></div>
+        <div class="description-container">
+            <span>TASK</span>
+            <span class="r-lbl">TOTAL</span>
+            <div id="services-container"></div>
+            <hr>
+            <span>NOTES</span>
+            <span class="r-lbl">TOTAL AMOUNT</span>
         </div>
-        <div></div>
+        <div class="description-container">
+            <span id="pmt-lbl">We accept cash, credit card, or PayPal</span>
+            <span class="r-lbl" id="total-lbl">0</span>
+            <span id="r-total-symbol-lbl">$</span>
+        </div>
+        <div id="send-btn-container">
+            <button id="send-btn">Send Invoice</button>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
