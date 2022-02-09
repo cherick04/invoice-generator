@@ -1,0 +1,44 @@
+body {
+  background: #1f2937;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+#top-container {
+  background: #3a69d2;
+  height: 150px;
+
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: auto;
+  padding-top: 40px;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+#service-btn-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.service-btn {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+
+  background: #d1d4f4;
+  border: 1px solid #d5d4d8;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
