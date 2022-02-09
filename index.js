@@ -24,6 +24,13 @@ const serviceBtnContainer = document.getElementById("service-btn-container")
 const servicesContainer = document.getElementById('services-container')
 const totalAmountLbl = document.getElementById('total-lbl')
 const paymentLabel = document.getElementById('pmt-lbl')
+const sendButton = document.getElementById('send-btn')
+
+/* Event listener for Send button. Clears all the services requested */
+sendButton.addEventListener('click', function() {
+    servicesRequested = []
+    renderServices()
+})
 
 /* Renders when the page initializes */
 function initialRender() {
@@ -36,7 +43,7 @@ function renderButtons() {
     let btnContainer = ''
     for (let i=0; i<services.length; i++) {
         btnContainer += `
-            <button class="service-btn" onClick='requestServiceForIndex(${i})'">
+            <button class="service-btn" onClick='requestServiceFor(${i})'">
                 ${services[i].service}: $${services[i].cost}
             </button>
         `
@@ -60,9 +67,9 @@ function renderServices() {
     // TODO: Add remove functionality
     for (let i=0; i<servicesRequested.length; i++) {
         serviceContent += `
-            <div>
+            <div id="services-container">
                 <span>${servicesRequested[i].service}</span>
-                <button class="remove-btn">Remove</button>
+                <button class="remove-btn" onclick="removeServiceAt(${i})">Remove</button>
                 <span class="r-lbl">${servicesRequested[i].cost}</span>
                 <span class="r-symbol-lbl">$</span>
             </div>
@@ -75,11 +82,21 @@ function renderServices() {
 /** Fires on the event of a service being requested
  * @param: The index of the service array
 */
-function requestServiceForIndex(index) {
+function requestServiceFor(index) {
     if (!servicesRequested.includes(services[index])) {
         servicesRequested.push(services[index])
         renderServices()
     }
+}
+
+/** Fires when removing an item in the servicesRequested array
+ * @param: The index of the requested services array
+*/
+function removeServiceAt(index) {
+    servicesRequested = servicesRequested
+        .slice(0, index)
+        .concat(servicesRequested.slice(index+1, servicesRequested.length))
+    renderServices()
 }
 
 initialRender()
