@@ -64,14 +64,17 @@ function renderTotal() {
 /* Renders all requested services. */
 function renderServices() {
     let serviceContent = ''
-    // TODO: Add remove functionality
     for (let i=0; i<servicesRequested.length; i++) {
         serviceContent += `
-            <div id="services-container">
-                <span>${servicesRequested[i].service}</span>
-                <button class="remove-btn" onclick="removeServiceAt(${i})">Remove</button>
-                <span class="r-lbl">${servicesRequested[i].cost}</span>
-                <span class="r-symbol-lbl">$</span>
+            <div class="container services">
+                <div>
+                    <span>${servicesRequested[i].service}</span>
+                    <button class="remove-btn" onclick="removeServiceAt(${i})">Remove</button>
+                </div>
+                <div>
+                    <span style='color: gray'>$</span>
+                    <span>${servicesRequested[i].cost}</span>
+                </div>
             </div>
         `
     }

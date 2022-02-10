@@ -5,10 +5,9 @@ body {
   justify-content: center;
 }
 
-#top-container {
+.top-container {
   background: #3a69d2;
   height: 150px;
-
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -44,19 +43,28 @@ h3 {
   border-radius: 7px;
 }
 
-.description-container {
+.container {
   color: lightgray;
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 10px;
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
 }
 
-.description-container #services-container {
+.services {
   margin-top: 15px;
   font-size: 20px;
   color: white;
+}
+
+.container hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-width: 0.25px;
 }
 
 .remove-btn {
@@ -67,48 +75,23 @@ h3 {
   border: none;
 }
 
-.description-container hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-  border-width: 0.25px;
-}
-
-.r-lbl {
-  float: right;
-}
-
-.r-symbol-lbl {
-  float: right;
-  color: gray;
-}
-
-#pmt-lbl {
-  font-size: 14px;
-}
-
-#total-lbl {
+.total-lbl {
   font-size: 30px;
   color: white;
-}
-#r-total-symbol-lbl {
-  float: right;
-  font-size: 30px;
-  color: white;
+  margin-left: auto;
 }
 
 #send-btn-container {
   text-align: center;
-  margin: 80px 30px;
+  margin: 30px 30px;
 }
 
 #send-btn {
   background: #3a69d2;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   height: 35px;
   width: 100%;
   border: none;
-
   border-radius: 5px;
 }
